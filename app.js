@@ -33,6 +33,10 @@ router.get('/player-caps', capsController.getPlayerCaps);
 router.post('/teammates', teammateFinder.getTeammates);
 router.post('/international-teammates', teammateFinder.getInternationalTeammates);
 
+router.get('/test', (ctx) => {
+  ctx.body = 'Hello World';
+});
+
 // Use the router routes
 app.use(router.routes());
 app.use(router.allowedMethods());
